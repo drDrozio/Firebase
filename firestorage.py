@@ -12,3 +12,12 @@ config={
 }
 
 firebase=pyrebase.initialize_app(config)
+
+storage=firebase.storage()
+
+## Uploading files (Image,Text,Audio)
+# storage.child("Images/newimage.jpg").put("messi.jpg")
+# print("Image Uploaded")
+
+storage.child("Images/newimage.jpg").download("downloaded.jgp")
+print("Image Downloaded")
